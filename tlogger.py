@@ -1,10 +1,4 @@
 import logging
-import os, sys
-
-from functools import wraps
-
-# Be sure this is set to False/Commented out before you deploy to AWS!
-# COLOUR_FORMATTER = True
 
 CRITICAL = 50
 FATAL = CRITICAL
@@ -14,19 +8,6 @@ WARN = WARNING
 INFO = 20
 DEBUG = 10
 NOTSET = 0
-
-
-def newobj(method):
-    @wraps(method)
-    # Well, newobj can be decorated with function, but we will cover the case
-    # where it decorated with method
-    def inner(self, *args, **kwargs):
-        obj = self.__class__.__new__(self.__class__)
-        obj.__dict__ = self.__dict__.copy()
-        method(obj, *args, **kwargs)
-        return obj
-
-    return inner
 
 
 class TLogger():
@@ -85,7 +66,6 @@ class TLogger():
 
         return self.logger.level
 
-    @newobj
     def add_consolehandler(self, infoLevel=logging.INFO,
                            logformat='%(asctime)s %(levelname)s [%(name)s %(funcName)s] %(message)s'):
         sh = logging.StreamHandler()
