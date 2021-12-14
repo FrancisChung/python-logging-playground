@@ -39,7 +39,7 @@ class TLogger():
                 self.logger.error(str(e))
 
     def error(self, message):
-        self.logger.error(message, stack_info=True, exc_info=True)
+        self.logger.error(message)
 
     def info(self, message):
         self.logger.info(message)
@@ -51,7 +51,7 @@ class TLogger():
         self.logger.debug(message)
 
     def critical(self, message):
-        self.logger.critical(message, stack_info=True, exc_info=True)
+        self.logger.critical(message)
 
     def setLevel(self, infoLevel):
         # Python's standard Logging has lots of design issues, especially with its API and expected behaviours
