@@ -80,7 +80,8 @@ if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s %(levelname)s [%(name)s %(funcName)s] %(message)s', level=20)
     base_logger.info("#17. LogLevel set to 20. Base Logger is is still duplicating. Test Logger should show but not showing")
     test_logger.info("#17. Info is not showing. BasicConfig did not work for Test Logger")
-    base_logger.warning("")
+    base_logger.info("Base Logger is duplicating")
+    test_logger.critical("Test Logger is duplicating")
 
 
 
