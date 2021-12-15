@@ -12,16 +12,14 @@ NOTSET = 0
 
 class TLogger():
     """
-    T(EASE)Logger : Wrapper class for Standard Python logger with some presets for TEASE,
-                    to help down on code duplication and enforce project wide standards
+    TLogger : Wrapper class for Standard Python logger
 
     Parameters:
         name        : Name of the Logger
         infoLevel   : logging level of the Logger (e.g. logging.DEBUG/INFO/WARNING/ERROR)
-        fileHandler : string file path to the file handler log file (e.g. /logs/xyz.log)
     """
 
-    def __init__(self, name: str, infoLevel=logging.INFO, fileHandler=None):
+    def __init__(self, name: str, infoLevel=logging.INFO):
         try:
             if name is None:
                 raise ValueError("Name argument not specified")
