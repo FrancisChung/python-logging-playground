@@ -5,3 +5,5 @@ slogger.py contains a sample logger based on the standard logging library that c
 using basicConfig that affects all loggers
 
 main.py contains some sample test sequences showing the various scenarios where changing levels work and don't work. 
+
+To run the tests: run python main.py to see the test results 
