@@ -52,7 +52,6 @@ class SLogger():
         self.logger.critical(message)
 
     def setLevel(self, infoLevel):
-        # Python's standard Logging has lots of design issues, especially with its API and expected behaviours
         # To dynamically reset the loglevel, you need to also change the parent levels as well as all handlers!
         self.logger.parent.setLevel(infoLevel)
         for handler in self.logger.parent.handlers:
