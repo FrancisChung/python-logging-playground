@@ -1,5 +1,6 @@
 # python-logging-playground
-Place to play around with the Standard Python Logging Library
+
+Supplementary Materials for StackOverflow answer : https://stackoverflow.com/a/70360470/1622880
 
 slogger.py contains a sample logger based on the standard logging library that correct changes loglevels without
 using basicConfig that affects all loggers
