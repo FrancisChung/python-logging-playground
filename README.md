@@ -2,6 +2,9 @@
 
 Supplementary Materials for StackOverflow answer : https://stackoverflow.com/a/70360470/1622880
 
+There's a bug with the Standard Logging Library, and the prevalent answer on StackOverflow that uses BasicConfig
+which is not applicable to all users.
+
 slogger.py contains a sample logger based on the standard logging library that correct changes loglevels without
 using basicConfig that affects all loggers
 
